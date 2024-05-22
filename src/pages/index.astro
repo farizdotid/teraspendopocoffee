@@ -7,16 +7,27 @@ import Section from "@components/Section.astro";
 
 const photos = await Promise.all([
   getEntryBySlug("photos", "001_yudha"),
+  getEntryBySlug("photos", "002"),
+  getEntryBySlug("photos", "003"),
+  getEntryBySlug("photos", "004"),
+  getEntryBySlug("photos", "006"),
+  getEntryBySlug("photos", "008"),
+  getEntryBySlug("photos", "009"),
+  getEntryBySlug("photos", "010"),
+  getEntryBySlug("photos", "011"),
+  getEntryBySlug("photos", "013"),
+  getEntryBySlug("photos", "014"),
+  getEntryBySlug("photos", "015"),
 ]);
 
 const meta: Metadata = {
-  title: "Purwa Rupa 2024",
-  description: "Purwa Rupa - Hari Menggambar Nasional 2024",
+  title: "Karya Purwa Rupa 2024",
+  description: "Hari Menggambar Nasional 2024",
 };
 ---
 
 <BaseLayout meta={meta}>
-  <Hero title="Purwa Rupa" detail="Hari Menggambar Nasional 2024" />
+  <Hero title="Karya Purwa Rupa" detail="Hari Menggambar Nasional 2024" />
   <Section title="" name="">
     <div class="grid-standard">
       {

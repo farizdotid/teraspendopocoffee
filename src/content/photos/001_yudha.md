@@ -6,6 +6,8 @@ location: Purwakarta
 date: 2024-05-23
 phoneNumber : "6283803520058"
 alt: "001 - Yudha Aditya"
+price: ""
+instagram: "artolelyy"
 original:
   {
     src: https://drive.google.com/file/d/1fEModR0a14zmNdkXG_-YQQVfv5cfr2yL/view?usp=sharing,

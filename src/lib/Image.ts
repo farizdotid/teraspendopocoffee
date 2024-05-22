@@ -12,6 +12,8 @@ export const imageSchema = z.object({
   description: z.string(),
   name:z.string(),
   phoneNumber:z.string(),
+  price:z.string(),
+  instagram:z.string(),
 });
 
 export type Image = z.infer<typeof imageSchema>;

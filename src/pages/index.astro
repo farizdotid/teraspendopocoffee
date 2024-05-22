@@ -1,0 +1,40 @@
+---
+import { getEntryBySlug } from "astro:content";
+import type { Metadata } from "@lib/Metadata";
+import BaseLayout from "@layouts/BaseLayout.astro";
+import Hero from "@components/Hero.astro";
+import Section from "@components/Section.astro";
+
+const photos = await Promise.all([
+  getEntryBySlug("photos", "001_yudha"),
+]);
+
+const meta: Metadata = {
+  title: "Purwa Rupa 2024",
+  description: "Purwa Rupa - Hari Menggambar Nasional 2024",
+};
+---
+
+<BaseLayout meta={meta}>
+  <Hero title="Purwa Rupa" detail="Hari Menggambar Nasional 2024" />
+  <Section title="" name="">
+    <div class="grid-standard">
+      {
+        photos.map(({ data, slug }) => (
+          <div class="relative">
+            <a href={`/photos/${slug}`} class="block">
+              <img
+                src={data.compressed.src}
+                alt={data.alt}
+                class="h-auto w-full"
+              />
+              <div class="bg-black text-white absolute top-0 left-0 p-2 text-lg font-semibold">
+                #{data.title}
+              </div>
+            </a>
+          </div>
+        ))
+      }
+    </div>
+  </Section>
+</BaseLayout>

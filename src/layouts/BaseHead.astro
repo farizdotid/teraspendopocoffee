@@ -1,0 +1,32 @@
+---
+import { ViewTransitions } from "astro:transitions";
+import type { Metadata } from "@lib/Metadata";
+import "../global.css";
+
+interface Props {
+  meta: Metadata;
+}
+const { meta } = Astro.props;
+---
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>{meta.title}</title>
+  <meta name="description" content={meta.description} />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content={meta.title} />
+  <meta property="og:description" content={meta.description} />
+  {meta.imageSrc && <meta property="og:image" content={meta.imageSrc} />}
+  {meta.permalinkSrc && <meta property="og:url" content={meta.permalinkSrc} />}
+
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+  <link rel="stylesheet" href="/assets/inter/inter.css" />
+
+  <ViewTransitions />
+</head>

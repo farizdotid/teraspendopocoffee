@@ -1,0 +1,21 @@
+{
+  "name": "purwarupa2024",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "astro dev --host",
+    "start": "astro dev --host",
+    "build": "astro build",
+    "preview": "astro preview",
+    "format": "prettier --write README.md src"
+  },
+  "dependencies": {
+    "@astrojs/tailwind": "^5.1.0",
+    "astro": "^4.5.15"
+  },
+  "devDependencies": {
+    "prettier": "3.2.5",
+    "prettier-plugin-astro": "0.13.0",
+    "prettier-plugin-tailwindcss": "0.5.11"
+  }
+}

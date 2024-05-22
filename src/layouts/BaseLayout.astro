@@ -1,0 +1,53 @@
+---
+import type { Metadata } from "@lib/Metadata";
+import BaseHead from "@layouts/BaseHead.astro";
+import Navbar from "@components/Navbar.astro";
+
+interface Props {
+  meta: Metadata;
+}
+const { meta } = Astro.props;
+---
+
+<style>
+  .footer-header {
+    @apply font-bold;
+  }
+  .footer-list {
+    @apply space-y-0.5;
+    @apply mt-1;
+  }
+</style>
+
+<BaseHead meta={meta} />
+<body class="bg-griko text-cultured">
+  <header>
+    <div class="frame my-8">
+      <Navbar
+        links={[
+          { text: "Bid Karya Lelang", href: "https://forms.gle/kzZghaSV184vAED47" },
+        ]}
+      />
+    </div>
+  </header>
+  <main>
+    <div class="frame space-y-8">
+      <slot />
+    </div>
+  </main>
+  <footer>
+    <div class="frame my-6 md:my-8">
+      <hr class="mb-3 opacity-20" />
+      <div
+        class="flex flex-col space-y-3 md:flex-row md:space-y-0 md:space-x-6"
+      >
+      <div>
+        <h5 class="footer-header">Purwa Rupa - Hari Menggambar Nasional 2024</h5>
+        <ul class="footer-list">
+          <li><p>© 2024 Ekraf Purwakarta</p></li>
+        </ul>
+      </div>
+      </div>
+    </div>
+  </footer>
+</body>

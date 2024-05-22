@@ -1,0 +1,43 @@
+---
+import { getCollection } from "astro:content";
+import type { Metadata } from "@lib/Metadata";
+import BaseLayout from "@layouts/BaseLayout.astro";
+import Section from "@components/Section.astro";
+import ImagePreview from "@components/ImagePreview.astro";
+
+const photos = await getCollection("photos");
+photos.sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+
+const art = await getCollection("art");
+
+const meta: Metadata = {
+  title: "Gallery - JP Ungaretti",
+  description:
+    "My photos and artwork. Inspired by mountains, sailboats, stars, and more.",
+};
+---
+
+<BaseLayout meta={meta}>
+  <Section title="Recent Photos">
+    <div class="grid-standard">
+      {
+        photos.map((photo) => (
+          <ImagePreview
+            src={photo.data.compressed.src}
+            alt={photo.data.alt}
+            href={`/photos/${photo.slug}`}
+          />
+        ))
+      }
+    </div>
+  </Section>
+  <Section title="My Art">
+    <div class="grid-standard">
+      {
+        art.map((a) => (
+          <ImagePreview src={a.data.compressed.src} alt={a.data.alt} />
+        ))
+      }
+    </div>
+  </Section>
+</BaseLayout>

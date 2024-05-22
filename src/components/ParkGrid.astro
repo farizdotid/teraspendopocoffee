@@ -1,0 +1,13 @@
+---
+import type { Park } from "@lib/Park";
+import ParkGridCell from "./ParkGridCell.astro";
+
+interface Props {
+  parks: Park[];
+}
+const { parks } = Astro.props;
+---
+
+<div class="grid grid-cols-1 gap-3 md:grid-cols-3">
+  {parks.map((park) => <ParkGridCell park={park} />)}
+</div>

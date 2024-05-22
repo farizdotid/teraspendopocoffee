@@ -1,0 +1,26 @@
+---
+import type { Link } from "@lib/Link";
+
+interface Props {
+  links: Link[];
+}
+const { links } = Astro.props;
+---
+
+<div class="flex items-center">
+  <div class="flex-grow">
+    <a href="/">
+      <img src="/assets/purwarupa_white.png" alt="Logo Purwa Rupa" class="h-11" />
+    </a>
+  </div>
+  <div class="flex space-x-6">
+    {
+      links.map((link) => (
+        <div class="font-medium md:text-lg">
+          <a href={link.href} target="_blank">{link.text}</a>
+        </div>
+      ))
+    }
+    <slot />
+  </div>
+</div>

@@ -92,7 +92,7 @@ const meta: Metadata = {
 <BaseLayout meta={meta}>
   <Hero title="Karya Purwa Rupa" detail="Hari Menggambar Nasional 2024" />
   <Section title="" name="">
-    <div class="columns-1 gap-4 space-y-2 md:columns-2 lg:columns-3">
+    <div class="grid-standard">
       {
         photos.map(({ data, slug }) => (
           <div class="relative">
@@ -100,7 +100,7 @@ const meta: Metadata = {
               <img
                 src={data.compressed.src}
                 alt={data.alt}
-                class="h-min w-full"
+                class="h-auto w-full"
               />
               <p class="absolute top-0 left-0 p-2 text-lg font-semibold underline decoration-wavy">
                 #{data.title}

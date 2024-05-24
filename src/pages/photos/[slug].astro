@@ -75,9 +75,12 @@ const meta: Metadata = {
 
       
       <div class="my-3 md:flex md:flex-col mt-12">
+
         <div class="flex-auto space-y-2">
           {photo.data.price ? (
+            <p class="text-sm">Harga Awal Lelang :</p>
            <h2 class="text-3xl font-bold">Rp. {photo.data.price}</h2>
+           <p class="text-sm">Harga terupdate bisa langsung cek Instagram <a href="https://www.instagram.com/ekrafpurwakarta" target="_blank" style="text-decoration: underline;">@ekrafpurwakarta</a></p>
           ) : (
             <h2 class="text-3xl font-bold"></h2>
           )}

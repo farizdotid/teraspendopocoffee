@@ -20,6 +20,7 @@ const photos = await Promise.all([
   getEntryBySlug("photos", "015"),
   getEntryBySlug("photos", "016"),
   getEntryBySlug("photos", "017"),
+  getEntryBySlug("photos", "018"),
   getEntryBySlug("photos", "023"),
   getEntryBySlug("photos", "024"),
   getEntryBySlug("photos", "025"),
@@ -91,7 +92,7 @@ const meta: Metadata = {
 <BaseLayout meta={meta}>
   <Hero title="Karya Purwa Rupa" detail="Hari Menggambar Nasional 2024" />
   <Section title="" name="">
-    <div class="grid-standard">
+    <div class="columns-1 md:columns-2 lg:columns-3 gap-4 space-y-2">
       {
         photos.map(({ data, slug }) => (
           <div class="relative">
@@ -99,11 +100,9 @@ const meta: Metadata = {
               <img
                 src={data.compressed.src}
                 alt={data.alt}
-                class="h-auto w-full"
+                class="h-min w-full"
               />
-              <div class="bg-black text-white absolute top-0 left-0 p-2 text-lg font-semibold">
-                #{data.title}
-              </div>
+              <p class="underline decoration-wavy absolute top-0 left-0 p-2 text-lg font-semibold">#{data.title}</p>
             </a>
           </div>
         ))

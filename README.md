@@ -1,7 +1,3 @@
-# My Website
-
-My favorite photos and projects.
-
 ## Getting Started
 
 Clone this repo. Install its dependencies. `npm run dev` a server!

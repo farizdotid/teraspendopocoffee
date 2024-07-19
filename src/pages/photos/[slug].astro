@@ -41,25 +41,37 @@ const meta: Metadata = {
           </p>
         </div>
       </div>
-      
-      <div class="my-3 md:flex md:flex-col mt-12">
 
+      <div class="my-3 mt-12 md:flex md:flex-col">
         <div class="flex-auto space-y-2">
-          {photo.data.price ? (
-             <a
-          href=""
-          class="text-md mt-3 inline-flex animate-bounce rounded-lg bg-pendopo px-4 py-2 font-medium tracking-wide text-white hover:animate-none focus:animate-none"
-        >
-          <span class="ml-2">💛 Bid Karya Lelang</span>
-        </a>
-
-            <p class="text-sm">Harga Awal Lelang :</p>
-           <h2 class="text-3xl font-bold">Rp. {photo.data.price}</h2>
-           <p class="text-sm">Harga terupdate bisa langsung cek di link berikut <a href="" target="_blank" style="text-decoration: underline;">Data Harga Lelang terkini</a></p>
-          ) : (
-            <h2 class="text-3xl font-bold"></h2>
-          )}
+          {
+            photo.data.price ? (
+              <>
+                <a
+                  href="https://forms.gle/g3js6eZ1VeFSbCMh8"
+                  class="text-md mt-3 inline-flex animate-bounce rounded-lg bg-pendopo px-4 py-2 font-medium tracking-wide text-white hover:animate-none focus:animate-none"
+                >
+                  <span class="ml-2">💛 Bid Karya Lelang</span>
+                </a>
+                <p class="text-sm">Harga Awal Lelang :</p>
+                <h2 class="text-3xl font-bold">Rp. {photo.data.price}</h2>
+                <p class="text-sm">
+                  Harga terupdate bisa langsung cek di link berikut{" "}
+                  <a
+                    href=""
+                    target="_blank"
+                    style="text-decoration: underline;"
+                  >
+                    Data Harga Lelang terkini
+                  </a>
+                </p>
+              </>
+            ) : (
+              <h2 class="text-3xl font-bold" />
+            )
+          }
         </div>
+      </div>
     </div>
   </Section>
 </BaseLayout>

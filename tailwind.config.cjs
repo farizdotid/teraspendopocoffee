@@ -12,6 +12,7 @@ module.exports = {
       "bluelight": "#85C1E9",
       "black": "#000000",
       "pendopo": "#C1A14E",
+      "white": "#FFFFFF",
     },
     fontFamily: {
       sans: ["Inter", fontFamily.sans],

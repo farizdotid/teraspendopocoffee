@@ -18,7 +18,7 @@ export async function getStaticPaths() {
 }
 
 const meta: Metadata = {
-  title: `${photo.data.title} - Purwa Rupa`,
+  title: `${photo.data.title} - TERAS`,
   description: photo.data.description,
   imageSrc: photo.data.compressed.src,
 };
@@ -41,46 +41,21 @@ const meta: Metadata = {
           </p>
         </div>
       </div>
-
-      <div class="mt-8 md:mt-8 flex justify-center">
-
-        <a
-          href={` https://api.whatsapp.com/send?phone=${photo.data.phoneNumber}&text=Halo%2C%20Saya%20ingin%20menanyakan%20Karya%20kamu%20yang%20ada%20di%20website%20Purwa%20Rupa.%20`}
-          target="_blank"
-          rel="noopener noreferrer"
-          class="bg-green-500 text-white hover:bg-green-700 inline-flex items-center rounded py-2 px-4 font-semibold transition duration-300"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="currentColor"
-            viewBox="0 0 24 24"
-            class="mr-2 h-6 w-6"
-          >
-            <path
-              d="M12 0C5.37 0 0 5.373 0 12c0 2.11.525 4.105 1.53 5.898L0 24l6.222-1.512A11.962 11.962 0 0 0 12 24c6.63 0 12-5.373 12-12S18.63 0 12 0zm0 22c-1.726 0-3.392-.433-4.877-1.255l-.356-.201-3.687.897.897-3.687-.201-.356C2.433 15.392 2 13.726 2 12c0-5.523 4.478-10 10-10s10 4.477 10 10-4.478 10-10 10zm5.447-7.415c-.075-.125-.274-.198-.57-.347-.296-.149-1.758-.867-2.031-.967-.274-.1-.474-.149-.673.149-.2.298-.773.967-.947 1.166-.174.198-.348.224-.644.075-.297-.149-1.256-.463-2.39-1.48-.883-.79-1.48-1.764-1.653-2.061-.174-.298-.019-.459.13-.608.134-.135.298-.348.446-.522.149-.174.199-.298.298-.497.099-.198.05-.373-.025-.522-.075-.149-.673-1.616-.923-2.217-.248-.6-.498-.52-.673-.53l-.572-.01c-.198 0-.522.075-.795.373-.274.298-1.04 1.015-1.04 2.479s1.065 2.877 1.214 3.074c.149.198 2.099 3.199 5.086 4.485.712.307 1.265.49 1.698.628.712.226 1.36.194 1.87.118.57-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.174-1.413z"
-            ></path>
-          </svg>
-          WhatsApp Artist
-        </a>
-
-        <a href={`https://instagram.com/${photo.data.instagram}`} target="_blank" rel="noopener noreferrer" class="inline-flex items-center bg-purple-500 text-white font-semibold py-2 px-4 rounded hover:bg-purple-700 transition duration-300">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="w-6 h-6 mr-2">
-            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.333 3.608 1.308.975.975 1.246 2.242 1.308 3.608.058 1.267.07 1.647.07 4.851 0 3.204-.012 3.584-.07 4.851-.062 1.366-.333 2.633-1.308 3.608-.975.975-2.242 1.246-3.608 1.308-1.267.058-1.647.07-4.851.07-3.204 0-3.584-.012-4.851-.07-1.366-.062-2.633-.333-3.608-1.308-.975-.975-1.246-2.242-1.308-3.608-.058-1.267-.07-1.647-.07-4.851 0-3.204.012-3.584.07-4.851.062-1.366.333-2.633 1.308-3.608.975-.975 2.242-1.246 3.608-1.308 1.267-.058 1.647-.07 4.851-.07zm0-2.163C8.708 0 8.292.014 7.046.072 5.615.135 4.345.406 3.38 1.372c-.965.965-1.237 2.235-1.3 3.666C2.014 6.708 2 7.124 2 12c0 4.876.014 5.292.072 6.538.063 1.431.335 2.701 1.3 3.666.965.965 2.235 1.237 3.666 1.3 1.246.058 1.662.072 6.538.072s5.292-.014 6.538-.072c1.431-.063 2.701-.335 3.666-1.3.965-.965 1.237-2.235 1.3-3.666.058-1.246.072-1.662.072-6.538s-.014-5.292-.072-6.538c-.063-1.431-.335-2.701-1.3-3.666-.965-.965-2.235-1.237-3.666-1.3C16.292.014 15.876 0 12 0zm0 5.838c-3.403 0-6.162 2.76-6.162 6.162 0 3.403 2.76 6.162 6.162 6.162 3.403 0 6.162-2.76 6.162-6.162 0-3.403-2.76-6.162-6.162-6.162zm0 10.324c-2.297 0-4.162-1.864-4.162-4.162 0-2.297 1.864-4.162 4.162-4.162 2.297 0 4.162 1.864 4.162 4.162 0 2.297-1.864 4.162-4.162 4.162zm6.406-11.845c-.796 0-1.44.645-1.44 1.44 0 .796.645 1.44 1.44 1.44.796 0 1.44-.645 1.44-1.44 0-.796-.645-1.44-1.44-1.44z"/>
-          </svg>
-          Instagram
-        </a>
-
-      </div>
-
-
       
       <div class="my-3 md:flex md:flex-col mt-12">
 
         <div class="flex-auto space-y-2">
           {photo.data.price ? (
+             <a
+          href=""
+          class="text-md mt-3 inline-flex animate-bounce rounded-lg bg-pendopo px-4 py-2 font-medium tracking-wide text-white hover:animate-none focus:animate-none"
+        >
+          <span class="ml-2">💛 Bid Karya Lelang</span>
+        </a>
+
             <p class="text-sm">Harga Awal Lelang :</p>
            <h2 class="text-3xl font-bold">Rp. {photo.data.price}</h2>
-           <p class="text-sm">Harga terupdate bisa langsung cek Instagram <a href="https://www.instagram.com/ekrafpurwakarta" target="_blank" style="text-decoration: underline;">@ekrafpurwakarta</a></p>
+           <p class="text-sm">Harga terupdate bisa langsung cek di link berikut <a href="" target="_blank" style="text-decoration: underline;">Data Harga Lelang terkini</a></p>
           ) : (
             <h2 class="text-3xl font-bold"></h2>
           )}

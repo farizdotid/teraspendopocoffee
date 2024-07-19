@@ -1,7 +1,6 @@
 ---
 import type { Metadata } from "@lib/Metadata";
 import BaseHead from "@layouts/BaseHead.astro";
-import Navbar from "@components/Navbar.astro";
 
 interface Props {
   meta: Metadata;
@@ -21,15 +20,7 @@ const { meta } = Astro.props;
 
 <BaseHead meta={meta} />
 <body class="bg-griko text-cultured">
-  <header>
-    <div class="frame my-8">
-      <Navbar
-        links={[
-          { text: "Bid Karya Lelang", href: "https://forms.gle/kzZghaSV184vAED47" },
-        ]}
-      />
-    </div>
-  </header>
+
   <main>
     <div class="frame space-y-8">
       <slot />
@@ -42,7 +33,7 @@ const { meta } = Astro.props;
         class="flex flex-col space-y-3 md:flex-row md:space-y-0 md:space-x-6"
       >
       <div>
-        <h5 class="footer-header">Purwa Rupa - Hari Menggambar Nasional 2024</h5>
+        <h5 class="footer-header">Therapy Art Session | @pendopo.coffee | @purwakarta.menggambar</h5>
         <ul class="footer-list">
           <li><p>© 2024 Ekraf Purwakarta</p></li>
         </ul>

@@ -6,6 +6,7 @@ import Hero from "@components/Hero.astro";
 import Section from "@components/Section.astro";
 
 const photos = await Promise.all([
+  getEntryBySlug("photos", "000"),
   getEntryBySlug("photos", "001"),
   getEntryBySlug("photos", "002"),
   getEntryBySlug("photos", "003"),
